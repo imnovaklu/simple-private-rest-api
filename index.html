@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/2017022711575780_easyicon_net_16.ico">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="jquery-ui-dist/jquery-ui.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="angular/angular.min.js"></script>
+    <script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+    <title>Novak</title>
+</head>
+<body ng-app="persoanlApp">
+<div id="loading" ng-controller="loadingController">
+    <p>Welcome, this is Novak :)</p>
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<div class="window_container container" ng-controller="windowController" >
+    <div class="row" ng-cloak="">
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 shortcut" ng-repeat="short in shortcuts">
+            <div class="shortcut_hover" title="double click to open">
+                <img src="{{short.imgUrl}}" ng-dblclick="shortcut_active($event)">
+                <span>{{short.text}}</span>
+            </div>
+        </div>
+    </div>
+    <div id="modal_command" class="window_modal col-lg-4 col-md-6 col-sm-10 col-xs-11 ui-widget-content" ng-show="modal_show" ng-cloak="">
+        <div class="modal-header ui-widget-header">
+            <div class="pull-right" ng-click="close_modal($event)">
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="pull-right" ng-click="max_modal($event)">
+                <i class="fa fa-window-maximize"></i>
+            </div>
+            <div class="pull-right" ng-click="min_modal($event)">
+                <i class="fa fa-window-minimize"></i>
+            </div>
+        </div>
+        <div class="modal-body" id="modal-body">
+
+        </div>
+        <div class="modal-footer">
+
+        </div>
+    </div>
+</div>
+<div id="start_menu" ng-cloak="">
+    <div class="start_menu_container">
+        <div class="start_menu_tools">
+            <i class="fa fa-user fa-md"></i>
+            <i class="fa fa-cog fa-md"></i>
+            <i class="fa fa-times-circle fa-md"></i>
+        </div>
+    </div>
+</div>
+<footer class="windows_bar" ng-controller="barController" ng-cloak="">
+    <div title="Start" class="windows_button pull-left" data-toggle="tooltip" data-placement="top" id="start">
+        <i class="fa fa-windows fa-lg"></i>
+    </div>
+    <input type="text" class="windows_textbox pull-left" placeholder="search for something"/>
+    <div title="Resume" class="windows_button pull-left" data-toggle="tooltip" data-placement="top">
+        <i class="fa fa-address-card fa-lg"></i>
+    </div>
+    <div class="pull-right bar_time">
+        <span class="text-white">{{time}}</span>
+        <span class="text-white">{{date}}</span>
+    </div>
+</footer>
+<script src="js/index.js"></script>
+<script src="js/angular/index.js"></script>
+</body>
+</html>

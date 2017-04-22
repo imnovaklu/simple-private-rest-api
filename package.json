@@ -10,8 +10,17 @@
   "author": "imnovaklu",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.4",
+    "angular-router": "0.0.2",
+    "angular-ui-router": "^0.4.2",
     "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
     "express": "^4.15.2",
-    "jsonwebtoken": "^7.3.0"
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-dist": "^1.12.1",
+    "jsonwebtoken": "^7.3.0",
+    "ui-router": "^1.0.0-alpha.3"
   }
 }

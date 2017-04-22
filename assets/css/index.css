@@ -1,0 +1,206 @@
+body{
+    background-size: cover;
+    background: url("../images/bg.jpg") repeat;
+    font-size: 16px;
+    position: relative;
+}
+
+.fa-lg{
+    font-size: 2em;
+}
+
+.fa-md{
+    font-size: 1.5em;
+}
+
+.fa{
+    line-height: 50px;
+    color: white;
+    transition: all .5s;
+}
+
+#loading{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background: #2f2f2f;
+    z-index: 10;
+}
+
+#loading>p{
+    width: 400px;
+    color: deepskyblue;
+    margin: 30% 50% 0;
+    text-align: center;
+    font-size: 2em;
+    transform: translateX(-200px);
+}
+
+.spinner {
+    margin: 20px 50%;
+    width: 150px;
+    text-align: center;
+    transform: translateX(-75px);
+}
+
+.spinner > div {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 40% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+
+.window_container{
+    width: 100%;
+    height: 200px;
+}
+
+.shortcut{
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+}
+
+.shortcut_hover{
+    width: 100px;
+    height: 90px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+.shortcut_hover.active, .shortcut_hover:hover{
+    background: rgba(255,255,255,.2);
+    border: solid 1px rgba(255,255,255,.4);
+}
+
+.shortcut span{
+    color: white;
+    display: block;
+}
+
+#start_menu{
+    position: fixed;
+    width: 250px;
+    height: 500px;
+    bottom: 50px;
+    left: 0;
+    background-color: #2f2f2f;
+    display: none;
+}
+
+.start_menu_tools{
+    width: 50px;
+    height: 100%;
+    margin-top: 350px;
+    text-align: center;
+}
+
+.start_menu_tools i{
+    width: 45px;
+}
+
+.windows_bar{
+    width: 100%;
+    height: 50px;
+    background-color: #2f2f2f;
+    position: fixed;
+    bottom: 0;
+}
+
+.windows_button{
+    width: 60px;
+    padding-left: 10px;
+}
+
+.windows_button:hover .fa-windows{
+    color: dodgerblue;
+}
+
+.text-white{
+    color: white;
+}
+
+.windows_textbox{
+    -webkit-appearance: none;
+    height: 60px;
+    width: 300px;
+    border: 0;
+    outline: none;
+    background: rgba(60, 60, 60, 0.89);
+    color: white;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.modal-header{
+    height: 40px;
+    padding: 0;
+    background: #2f2f2f;
+}
+
+.modal-header>div{
+    width: 30px;
+    height: 100%;
+    text-align: center;
+}
+
+.modal-header>div:hover{
+    background: rgba(0,0,0,.2);
+}
+
+.modal-header .fa{
+    line-height: 40px;
+}
+
+.window_modal{
+    height: 400px;
+    background: white;
+    border: 5px;
+    padding: 0;
+}
+
+#modal_command{
+
+}
+
+.bar_time{
+    width: 80px;
+    height: 50px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.bar_time span{
+    font-size: 0.8em;
+    line-height: 25px;
+}
