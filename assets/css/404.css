@@ -1,0 +1,88 @@
+body{
+    background: #0073c2;
+    font-size: 24px;
+    font-family: 'Lucida';
+}
+
+h1{
+    font-size: 8em;
+    color: white;
+}
+
+h3{
+    font-size: 2em;
+    color: white;
+    line-height: 1.5em;
+}
+
+h5{
+    font-size: 1.5em;
+    color: white;
+    line-height: 1em;
+}
+
+.container{
+    padding-top: 100px;
+}
+
+.time-container{
+    display: inline-block;
+    width: 21px;
+    height: 31px;
+    position: relative;
+}
+
+span{
+    display: inline-block;
+    width: 21px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0073c2;
+    -webkit-animation: counter 1s ease-in-out forwards;
+    -o-animation: counter 1s ease-in-out forwards;
+    animation: counter 1s ease-in-out forwards;
+}
+
+span:nth-child(1){
+    animation-delay: 5s;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    -o-animation-delay: 5s;
+}
+
+span:nth-child(2){
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+}
+
+span:nth-child(3){
+    animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+}
+
+span:nth-child(4){
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+}
+
+span:nth-child(5){
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+}
+
+@keyframes counter {
+    100% {
+        -webkit-transform: rotateX(90deg); /* Safari */
+        transform: rotateX(90deg);
+    }
+}

@@ -1,0 +1,19 @@
+<table class="table table-hover table-striped table-bordered" ng-controller="contactController">
+    <thead class="thead-primary">
+    <tr>
+        <td colspan="2">
+            <strong>Novak Lu</strong>
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="contact in contacts">
+        <td>
+            {{contact.approach}}
+        </td>
+        <td>
+            {{contact.value}}
+        </td>
+    </tr>
+    </tbody>
+</table>

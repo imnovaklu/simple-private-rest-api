@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
     <script src="jquery/dist/jquery.min.js"></script>
     <script src="jquery-ui-dist/jquery-ui.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
@@ -26,7 +27,7 @@
     <div class="row" ng-cloak="">
         <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 shortcut" ng-repeat="short in shortcuts">
             <div class="shortcut_hover" title="double click to open">
-                <img src="{{short.imgUrl}}" ng-dblclick="shortcut_active($event)">
+                <img src="{{short.imgUrl}}" data-href="{{short.href}}" ng-dblclick="shortcut_active($event)">
                 <span>{{short.text}}</span>
             </div>
         </div>
@@ -44,7 +45,7 @@
             </div>
         </div>
         <div class="modal-body" id="modal-body">
-
+            <ui-view></ui-view>
         </div>
         <div class="modal-footer">
 
@@ -74,6 +75,6 @@
     </div>
 </footer>
 <script src="js/index.js"></script>
-<script src="js/angular/index.js"></script>
+<script src="js/controller.min.js"></script>
 </body>
 </html>

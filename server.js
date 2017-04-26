@@ -1,29 +1,29 @@
 var express = require('express'),
     app = express(),
-    bodyParser = require('body-parser'),
-    jwt = require('jsonwebtoken');
+    path = require('path'),
+    bodyParser = require('body-parser');
 
 process.env.PORT = 8080;
 process.env.SECRET_KEY = "novaksecret";
 
-app.use(express.static('assets'));
-app.use(express.static('node_modules'));
+app.use(express.static(__dirname + '/assets'));
+app.use(express.static(__dirname + '/node_modules'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use('/api/user', require('./controller/user'));
+app.use('/api/access', require('./controller/token'));
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + "/index.html");
 });
 
-app.use('/user', require('./controller/user'));
+app.get('/404', function (req, res) {
+    res.sendFile(__dirname + '/404.html');
+});
 
-app.get('/access', function (req, res) {
-    var token = jwt.sign({}, process.env.SECRET_KEY, {
-        expiresIn: 60*60
-    });
-    res.json({
-        token: token
-    });
+app.get('*', function (req, res) {
+    res.redirect('/404');
 });
 
 app.listen(process.env.PORT, function () {
